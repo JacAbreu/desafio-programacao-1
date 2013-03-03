@@ -1,0 +1,22 @@
+<style type="text/css">
+.metanav
+{
+    
+}
+</style>
+<div class="page">
+  <h1>{{ title }}</h1>
+  <div>
+  <form action="{{ url_for('sale_report') }}" enctype=multipart/form-data method=post class=add-entry>
+  	Importar informações de vendas para o sistema: <input type=file name=source>
+  	<input type=submit value= Importar>
+  </div>
+  <div class="metanav">
+
+  	<ul class=entries>
+  	 	{% for sale in sales %}
+  	 		<li> {{ sale.product.name }} - {{ sale.value }} - {{ sale.quantity }} - {{ sale.client.name }} </li>
+  	 	{% endfor %}
+  	</ul>
+  </div>
+</div>

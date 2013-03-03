@@ -1,0 +1,29 @@
+<style type="text/css">
+.metanav
+{
+ 
+}
+</style>
+<div class="page">
+  <h1>{{ title }}</h1>
+  <div class="metanav">
+  {% if client %}
+ 	 <form action="{{ url_for('new_client') }}" method=POST>
+ 	 	Username <input type=text size=30 name=username>
+ 	 	Nome <input type=text size=30 name=name>
+ 	 	Endereço  <input type=text size=30 name=address>
+ 	 	Email<input type=text size=30 name=email>
+ 	 	<input type=submit value="Cadastrar Novo Cliente">
+ 	 </form>
+ {% endif %}
+ 
+  {% if sale %}
+ 	 <form action="{{ url_for('checkout') }}" method=POST>
+ 	 	Cliente (username) <input type=text size=30 name=client>
+ 	 	Produto (nome) <input type=text size=30 name=product>
+ 	 	Quantidade  <input type=text size=30 name=quantity>
+ 	 	<input type=submit value="Concluir a venda">
+ 	 </form>
+ {% endif %}
+   </div>
+</div>

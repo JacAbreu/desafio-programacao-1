@@ -1,0 +1,8 @@
+Readme
+
+Desenvolvendo o projeto, foi necessário instalar:
+
+Flask - pip install Flask
+SQLAlchemy - pip install SQLAlchemy
+ - pip install flask.ext.sqlalchemy
+Jinja2 - pip install Jinja2
